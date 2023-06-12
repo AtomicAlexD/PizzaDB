@@ -1,6 +1,5 @@
 #add home page here, link to log in and register 
 from flask import Blueprint, render_template, request, flash, redirect, url_for, session
-from db_read import basket_count
 
 home_bp = Blueprint('home',__name__, template_folder='templates/home')
 

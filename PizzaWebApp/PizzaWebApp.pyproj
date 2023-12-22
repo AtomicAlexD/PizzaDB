@@ -6,7 +6,7 @@
     <ProjectGuid>b391a57c-b56c-4739-9a0c-80b7ddc35dcf</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <ProjectTypeGuids>{789894c7-04a9-4a11-a6b5-3f4435165112};{1b580a1a-fdb3-4b32-83e1-6407eb2722e6};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
-    <StartupFile>test_web_server.py</StartupFile>
+    <StartupFile>run_web_server.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -27,14 +27,16 @@
     <DebugSymbols>true</DebugSymbols>
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'TESTING' ">
+    <OutputPath>bin\TESTING\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="auth.py" />
-    <Compile Include="db_read.py" />
-    <Compile Include="db_write.py" />
+    <Compile Include="db_calls.py" />
     <Compile Include="home.py" />
     <Compile Include="order.py" />
     <Compile Include="pizza_web_app.py" />
-    <Compile Include="test_web_server.py" />
+    <Compile Include="run_web_server.py" />
     <Compile Include="__init__.py" />
   </ItemGroup>
   <ItemGroup>
